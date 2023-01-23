@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcProje.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,25 +9,32 @@ namespace MvcProje.Controllers
 {
     public class ProjectController : Controller
     {
+        MvcProjeDbEntities db = new MvcProjeDbEntities();
+
         [Route("yazilim-projeleri")]
         public ActionResult SoftwareProject()
         {
-            return View();
+            return View(db.tbl_project.Where(s => s.ProjectCategory == "yazilim-projeleri").ToList());
         }
         [Route("ik-projeleri")]
         public ActionResult HrProject()
         {
-            return View();
+            return View(db.tbl_project.Where(s => s.ProjectCategory == "ik-projeleri").ToList());
         }
         [Route("finans-projeleri")]
         public ActionResult FinanceProject()
         {
-            return View();
+            return View(db.tbl_project.Where(s => s.ProjectCategory == "finans-projeleri").ToList());
         }
-        [Route("Proje-detay")]
-        public ActionResult Detail()
+        [Route("proje-detay/{id?}")]
+        public ActionResult Detail(int? id)
         {
-            return View();
+            if (id == null || id == 0)
+            {
+                return HttpNotFound();
+            }
+            tbl_project project = db.tbl_project.Find(id);
+            return View(project);
         }
     }
 }

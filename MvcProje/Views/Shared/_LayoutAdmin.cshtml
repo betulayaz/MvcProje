@@ -9,26 +9,19 @@
     <title>Hoşgeldiniz | MVC PROJE ADMİN PANEL</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
     <!-- Bootstrap Core Css -->
     <link href="@Url.Content("~/Content/Admin/plugins/bootstrap/css/bootstrap.css")" rel="stylesheet">
-
     <!-- Waves Effect Css -->
     <link href="@Url.Content("~/Content/Admin/plugins/node-waves/waves.css")" rel="stylesheet" />
-
     <!-- Animation Css -->
     <link href="@Url.Content("~/Content/Admin/plugins/animate-css/animate.css")" rel="stylesheet" />
-
     <!-- Morris Chart Css-->
     <link href="@Url.Content("~/Content/Admin/plugins/morrisjs/morris.css")" rel="stylesheet" />
-
     <!-- Custom Css -->
     <link href="@Url.Content("~/Content/Admin/css/style.css")" rel="stylesheet">
-
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="@Url.Content("~/Content/Admin/css/themes/all-themes.css")" rel="stylesheet" />
 </head>
@@ -51,10 +44,7 @@
         </div>
     </div>
     <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    <!-- Top Bar -->
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -70,9 +60,7 @@
             </div>
         </div>
     </nav>
-    <!-- #Top Bar -->
     <section>
-        <!-- Left Sidebar -->
         <aside id="leftsidebar" class="sidebar">
             <!-- User Info -->
             <!--<div class="user-info">
@@ -102,7 +90,7 @@
                 <ul class="list">
                     <li class="header">MENÜ</li>
                     <li class="active">
-                        <a href="@Url.Action("Index","UserAdmin")">
+                        <a href="@Url.Action("Index","Login")">
                             <i class="material-icons">home</i>
                             <span>Anasayfa</span>
                         </a>
@@ -137,18 +125,13 @@
                     </li>
                 </ul>
             </div>
-            <!-- #Menu -->
-            <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
                     &copy; @DateTime.Now.ToString("MM/dd/yyyy") <a href="javascript:void(0);">Admin</a>.
                 </div>
             </div>
-            <!-- #Footer -->
         </aside>
-        <!-- #END# Left Sidebar -->
     </section>
-
     <section class="content">
         <div class="container-fluid">
             @RenderBody()
@@ -159,40 +142,30 @@
     <script src="@Url.Content("~/Content/Admin/plugins/jquery/jquery.min.js")"></script>
     <!-- Bootstrap Core Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/bootstrap/js/bootstrap.js")"></script>
-
     <!-- Select Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/bootstrap-select/js/bootstrap-select.js")"></script>
-
     <!-- Slimscroll Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/jquery-slimscroll/jquery.slimscroll.js")"></script>
-
     <!-- Waves Effect Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/node-waves/waves.js")"></script>
-
     <!-- Jquery CountTo Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/jquery-countto/jquery.countTo.js")"></script>
-
     <!-- Morris Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/raphael/raphael.min.js")"></script>
     <script src="@Url.Content("~/Content/Admin/plugins/morrisjs/morris.js")"></script>
-
     <!-- ChartJs -->
     <script src="@Url.Content("~/Content/Admin/plugins/chartjs/Chart.bundle.js")"></script>
-
     <!-- Flot Charts Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/flot-charts/jquery.flot.js")"></script>
     <script src="@Url.Content("~/Content/Admin/plugins/flot-charts/jquery.flot.resize.js")"></script>
     <script src="@Url.Content("~/Content/Admin/plugins/flot-charts/jquery.flot.pie.js")"></script>
     <script src="@Url.Content("~/Content/Admin/plugins/flot-charts/jquery.flot.categories.js")"></script>
     <script src="@Url.Content("~/Content/Admin/plugins/flot-charts/jquery.flot.time.js")"></script>
-
     <!-- Sparkline Chart Plugin Js -->
     <script src="@Url.Content("~/Content/Admin/plugins/jquery-sparkline/jquery.sparkline.js")"></script>
-
     <!-- Custom Js -->
     <script src="@Url.Content("~/Content/Admin/js/admin.js")"></script>
     <script src="@Url.Content("~/Content/Admin/js/pages/index.js")"></script>
-
     <!-- Demo Js -->
     <script src="@Url.Content("~/Content/Admin/js/demo.js")"></script>
 </body>

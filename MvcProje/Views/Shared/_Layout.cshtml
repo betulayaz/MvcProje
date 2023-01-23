@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>@Html.Raw(ViewBag.Title)</title>
-
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 
     <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/style.css")">
     <link rel="stylesheet" href="@Url.Content("~/Content/Site/css/responsive.css")">
@@ -19,9 +17,7 @@
 
 </head>
 <body>
-
     <div class="boxed_wrapper">
-
         <header class="top-bar">
             <div class="container">
                 <div class="clearfix">
@@ -39,17 +35,14 @@
                 </div>
             </div>
         </header>
-
-
         <section class="mainmenu-area stricky">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="main-logo">
-                            <a href="@Url.Action("","")" style="font-weight:bold">SİTE LOGO </a>
+                            <a href="@Url.Action("","")" style="font-weight:bold">SİTE LOGO </a>   @* Buraya sitenin logosu gelecek.*@
                         </div>
                     </div>
-
                     <div class="col-md-6 menu-column">
                         <nav class="main-menu">
                             <div class="navbar-header">
@@ -62,11 +55,9 @@
                             </div>
                             <div class="navbar-collapse collapse clearfix" style="float: right;">
                                 <ul class="navigation clearfix">
-
                                     <li class="current dropdown">
                                         <a href="@Url.Action("","")">Anasayfa</a>                                   
                                     </li>
-
                                     <li class="dropdown">
                                         <a href="@Url.Action("Index","About")">Hakkımızda</a>
                                         @*<ul>
@@ -76,7 +67,6 @@
                                             <li><a href="error.html">404 Page</a></li>
                                         </ul>*@
                                     </li>
-
                                     <li class="dropdown">
                                         <a href="#">Projeler</a>
                                         <ul>
@@ -86,13 +76,10 @@
                                         </ul>
                                     </li>
                                 </ul>
-
                                 <ul class="mobile-menu clearfix">
-
                                     <li class="dropdown">
                                         <a href="@Url.Action("","")">Anasayfa</a>
                                     </li>
-
                                     <li class="dropdown">
                                         <a href="@Url.Action("Index","About")">Hakkımızda</a>
                                         <ul>
@@ -102,7 +89,6 @@
                                             <li><a href="error.html">404 Page</a></li>
                                         </ul>
                                     </li>
-
                                     <li class="dropdown">
                                         <a href="@Url.Action("Index","Project")">Projelerimiz</a>
                                         <ul>
@@ -128,28 +114,18 @@
                 </div>
             </div>
         </section>
-
-        @RenderBody()
-       
-
+        @RenderBody()     
         <footer class="main-footer">
-
-            <!--Widgets Section-->
             <div class="widgets-section">
                 <div class="container">
                     <div class="row">
-                        <!--Big Column-->
                         <div class="big-column col-md-6 col-sm-12 col-xs-12">
                             <div class="row clearfix">
-
-                                <!--Footer Column-->
                                 <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                     <div class="footer-widget about-widget">
                                         <figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt=""></a></figure>
-
                                         <div class="widget-content">
                                             <div class="text"><p>Deneme is a global consulting firm with a twist. We bring big ideas and challenge the norm. We work with our clients, not at them.</p> </div>
-
                                             <ul class="social">
                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -162,12 +138,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!--Big Column-->
                         <div class="big-column col-md-6 col-sm-12 col-xs-12">
                             <div class="row clearfix">
-
-                                <!--Footer Column-->
                                 <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                     <div class="footer-widget links-widget">
                                         <div class="section-title">
@@ -176,7 +148,9 @@
                                         <div class="widget-content">
                                             <ul class="list">
                                                 <li><a href="/Hakkımızda">Hakkımızda</a></li>
-                                                <li><a href="/Projeler">Projeler</a></li>
+                                                <li><a href="/yazilim-projeleri">Yazılım Projeleri</a></li>
+                                                <li><a href="/ik-projeleri">İnsan Kaynakları Projeleri</a></li>
+                                                <li><a href="/finans-projeleri">Finans Projeleri</a></li>
                                                 <li><a href="/İletişim">İletişim</a></li>
                                             </ul>
                                         </div>
@@ -184,52 +158,32 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
-            <!--Footer Bottom-->
             <div class="footer-bottom">
                 <div class="container">
                     <div class="pull-left copy-text">
                         <p>Copyrights © @DateTime.Now.ToString("yyyy") All Rights Reserved by <a href="#"> Deneme.</a></p>
-
-                    </div><!-- /.pull-right -->
-                </div><!-- /.container -->
+                    </div>
+                </div>
             </div>
-
         </footer>
-
-        <!-- Scroll Top Button -->
         <button class="scroll-top tran3s color2_bg">
             <span class="fa fa-angle-up"></span>
         </button>
-        <!-- pre loader  -->
         <div class="preloader"></div>
-
-
-        <!-- jQuery js -->
-
         <script src="@Url.Content("~/Content/Site/js/jquery.js")"></script>
-        <!-- bootstrap js -->
         <script src="@Url.Content("~/Content/Site/js/bootstrap.min.js")"></script>
-        <!-- jQuery ui js -->
         <script src="@Url.Content("~/Content/Site/js/jquery-ui.js")"></script>
-        <!-- owl carousel js -->
         <script src="@Url.Content("~/Content/Site/js/owl.carousel.min.js")"></script>
-        <!-- jQuery validation -->
         <script src="@Url.Content("~/Content/Site/js/jquery.validate.min.js")"></script>
-        <!-- google map -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
         <script src="@Url.Content("~/Content/Site/js/gmap.js")"></script>
-        <!-- mixit up -->
         <script src="@Url.Content("~/Content/Site/js/wow.js")"></script>
         <script src="@Url.Content("~/Content/Site/js/jquery.mixitup.min.js")"></script>
         <script src="@Url.Content("~/Content/Site/js/jquery.fitvids.js")"></script>
         <script src="@Url.Content("~/Content/Site/js/bootstrap-select.min.js")"></script>
-
-        <!-- revolution slider js -->
         <script src="@Url.Content("~/Content/Site/assets/revolution/js/jquery.themepunch.tools.min.js")"></script>
         <script src="@Url.Content("~/Content/Site/assets/revolution/js/jquery.themepunch.revolution.min.js")"></script>
         <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.actions.min.js")"></script>
@@ -241,8 +195,6 @@
         <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.parallax.min.js")"></script>
         <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.slideanims.min.js")"></script>
         <script src="@Url.Content("~/Content/Site/assets/revolution/js/extensions/revolution.extension.video.min.js")"></script>
-
-        <!-- fancy box -->
         <script src="@Url.Content("~/Content/Site/js/jquery.fancybox.pack.js")"></script>
         <script src="@Url.Content("~/Content/Site/js/jquery.polyglot.language.switcher.js")"></script>
         <script src="@Url.Content("~/Content/Site/js/nouislider.js")"></script>
@@ -255,8 +207,6 @@
         <script src="@Url.Content("~/Content/Site/js/jquery.countTo.js")"></script>
         <script id="map-script" src="@Url.Content("~/Content/Site/js/default-map.js")"></script>
         <script src="@Url.Content("~/Content/Site/js/custom.js")"></script>
-
     </div>
-
 </body>
 </html>
